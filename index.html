@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Explore internships across technology, design and data.">
+  <title>InternHub | Find Your Internship</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script.js" defer></script>
+</head>
+<body>
+  <a class="skip-link" href="#internships">Skip to internships</a>
+
+  <header class="site-header">
+    <nav class="nav container" aria-label="Main navigation">
+      <a class="logo" href="#" aria-label="InternHub home">Intern<span>Hub</span></a>
+      <a class="nav-link" href="#internships">Explore internships</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container">
+        <p class="eyebrow">YOUR CAREER STARTS HERE</p>
+        <h1>Find an internship.<br>Build your future.</h1>
+        <p class="hero-text">
+          Discover opportunities to learn, build skills and launch your career.
+        </p>
+        <a class="primary-button" href="#internships">Explore opportunities</a>
+      </div>
+    </section>
+
+    <section class="listing-section container" id="internships">
+      <div class="section-heading">
+        <div>
+          <p class="eyebrow">OPPORTUNITIES FOR YOU</p>
+          <h2>Explore internships</h2>
+        </div>
+        <p class="muted">Find your next opportunity</p>
+      </div>
+
+      <form id="filter-form" class="filters">
+        <div class="field search-field">
+          <label for="search">Search internships</label>
+          <input
+            id="search"
+            name="search"
+            type="search"
+            placeholder="Try JavaScript or designer"
+            autocomplete="off"
+          >
+        </div>
+
+        <div class="field">
+          <label for="domain">Choose a domain</label>
+          <select id="domain" name="domain">
+            <option value="all">All domains</option>
+            <option value="Web Development">Web Development</option>
+            <option value="Data Science">Data Science</option>
+            <option value="UI/UX Design">UI/UX Design</option>
+            <option value="Digital Marketing">Digital Marketing</option>
+            <option value="Cybersecurity">Cybersecurity</option>
+          </select>
+        </div>
+
+        <button class="primary-button search-button" type="submit">
+          Search
+        </button>
+        <button class="reset-button" id="reset" type="button">
+          Clear filters
+        </button>
+      </form>
+
+      <div class="results-heading">
+        <h3>Available opportunities</h3>
+        <p id="result-count" aria-live="polite">Loading internships…</p>
+      </div>
+
+      <p id="error-message" class="status error" role="alert" hidden></p>
+      <p id="empty-message" class="status" role="status" hidden>
+        No internships match your search. Try another keyword or clear your filters.
+      </p>
+
+      <div id="internship-list" class="internship-grid"
+           aria-label="Internship results"></div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container">
+      <p>InternHub · Your next opportunity starts here.</p>
+      <p>Demo project with fictional internship listings.</p>
+    </div>
+  </footer>
+</body>
+</html>
